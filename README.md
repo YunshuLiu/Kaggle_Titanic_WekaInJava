@@ -2,7 +2,7 @@ Kaggle_Titanic_WekaInJava
 =========================
 1. This repository contains my Java code for the Titanic project in Kaggle competition. In order to run the code yourself, you will have to preprocess the data you downloaded from Kaggle-Titanic website and convert it to .arff format, the name of the training file is "trainV4_rmParch.arff", name of the test file is "test_V4_rmParch.arff". Note I also did some preprocessing before I feed them into Weka, for example, I removed feature "parch", extract lastname from feature "name", these preprocessing are proved to improve the performance of the prediction. In training dataset, the first column is the lable, if you put the label in other columns, you will need to modify "trainIns.setClassIndex(0)", for example, if your lable is in the last column, you can change the code to trainIns.setClassIndex(trainIns.numAttributes()-1).
 2. My code used two libraries, one is Weka, which you can download at http://www.cs.waikato.ac.nz/ml/weka/, the other is Amten's fast Neural Network implementation, which you can download at https://github.com/amten/NeuralNetwork, in order to run my code, you will need to include weka.jar from Weka and NeuralNetwork.jar from Amten's repository in you path.
-3. Functitality of each file:
+3. Functionality:
  * TitanicSMO.java: implemention of SVM with PolyKernel or RBFKernel
  * TitanicSMOCVPS.java: implemention of SVM with PolyKernel, where you can setup a range of C paramenter using CVParameterSelection
  * TitanicSMOGridSearch.java: implemention of SVM with RBFKernel, where you can setup a grid for parameter C and kernel.gamma
